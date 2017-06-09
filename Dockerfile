@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER nicetry@example.com
 
-RUN sudo apt-get update && sudo apt-get install -y \
+RUN apt-get update && apt-get install -y \
 apt-transport-https \
 curl \
 lxc \
@@ -12,7 +12,7 @@ build-essential && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Docker from Docker Inc. repositories.
-RUN sudo curl -sSL https://get.docker.com/ | sh
-RUN sudo pip install awscli
+RUN curl -sSL https://get.docker.com/ | sh
+RUN pip install awscli
 
 
